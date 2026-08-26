@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Food Wagon Timișoara | Street Food</title>
-  <!-- Legătura directă către stilul bilet Bera Food -->
-  <link rel="stylesheet" href="styles.css?v=100">
+  <title>Food Wagon Dumbrăvița | Street Food</title>
+  <link rel="stylesheet" href="styles.css?v=300">
   <script defer src="script.js"></script>
 </head>
 <body>
@@ -14,13 +13,13 @@
   <header class="site">
     <div class="nav">
       <div class="logo-mark">
-  <img src="logo.png" alt="Food Wagon Logo">
-  <span class="logo-text">FOOD<span class="orange"> WAGON</span></span>
-</div>
+        <img src="logo.png" alt="Food Wagon Logo">
+        <span class="logo-text">FOOD<span class="orange"> WAGON</span></span>
+      </div>
       <nav class="links" id="navLinks">
         <a href="#meniu">Meniu</a>
         <a href="#despre">Despre</a>
-        <a href="#locatie">Unde ne găsești</a>
+        <a href="#locatie">Locație</a>
       </nav>
       <div class="nav-cta">
         <button class="order-btn" onclick="openOrderModal()">
@@ -34,22 +33,20 @@
 
   <!-- HERO SECTION -->
   <section class="hero">
-    <div class="hero-content">
-  <img src="logo.png" alt="Food Wagon Logo" class="hero-logo-large">
-  <div class="badge-row">
-    <span class="pill rating">★ 4.9 Street Food Timișoara</span>
-  </div>
-  <h1>ORDER. EAT. <span class="orange-text">REPEAT.</span></h1>
-  <!-- restul codului din Hero... -->
+    <div class="wrap">
+      <div class="hero-content">
+        <img src="logo.png" alt="Food Wagon Logo" class="hero-logo-large">
+        <div class="badge-row">
+          <span class="pill rating">★ 4.9 Street Food Dumbrăvița</span>
         </div>
-        <h1>GUSTUL AUTENTIC DE STREET FOOD <span class="gold-text">PE ROȚI ÎN TIMIȘOARA.</span></h1>
-        <p class="lead">Gătim burgeri artizanali, loaded fries și crispy chicken proaspăt, direct din Food Wagon. Ingrediente alese, sosuri de casă și rețete proprii.</p>
+        <h1>ORDER. EAT. <span class="orange-text">REPEAT.</span></h1>
+        <p class="lead">Gătim burgeri artizanali, loaded fries și crispy chicken proaspăt, direct din Food Wagon-ul nostru din Dumbrăvița. Ingrediente alese, sosuri de casă și rețete proprii.</p>
         <div class="hero-ctas">
-          <a href="#meniu" class="btn-primary">Vezi Meniul Zilei</a>
-          <a href="#locatie" class="btn-outline">Unde suntem azi?</a>
+          <a href="#meniu" class="btn-primary">Vezi Meniul</a>
+          <a href="#locatie" class="btn-outline">Unde ne găsești?</a>
         </div>
         <div class="hero-info-line">
-          <span>📍 Complex Studențesc / Parcul Rozelor</span>
+          <span>📍 Dumbrăvița</span>
           <span class="dot">•</span>
           <span>🕒 Luni - Duminică: 11:00 - 23:00</span>
         </div>
@@ -67,7 +64,7 @@
         </div>
         <div class="about-cell">
           <div class="num">+15K</div>
-          <div class="lbl">Burgeri și porții servite în Timișoara</div>
+          <div class="lbl">Porții servite în Dumbrăvița</div>
         </div>
         <div class="about-cell">
           <div class="num">8</div>
@@ -75,7 +72,7 @@
         </div>
         <div class="about-cell">
           <div class="num">15 Min</div>
-          <div class="lbl">Timp mediu de preparare pe loc</div>
+          <div class="lbl">Timp mediu de preparare</div>
         </div>
       </div>
     </div>
@@ -86,7 +83,7 @@
     <div class="wrap">
       <div class="sec-head">
         <span class="eyebrow">Preparat pe loc</span>
-        <h2>MENIUL WAGON</h2>
+        <h2>MENIUL FOOD WAGON</h2>
         <p>Alege din selecția noastră de street food. Fiecare produs este pregătit proaspăt imediat după comandă.</p>
       </div>
 
@@ -98,7 +95,7 @@
         <button class="tab-btn" data-category="bauturi">Răcoritoare</button>
       </div>
 
-      <!-- GRID PRODUSE (STIL BILET BERA FOOD) -->
+      <!-- GRID PRODUSE (STIL BILET NEON) -->
       <div class="menu-grid">
         <!-- BURGERI -->
         <div class="menu-ticket" data-category="burgeri">
@@ -111,7 +108,7 @@
 
         <div class="menu-ticket" data-category="burgeri">
           <div class="ticket-info">
-            <h4>Timișoara Spicy Burger</h4>
+            <h4>Dumbrăvița Spicy Burger</h4>
             <p>Vită Angus, jalapeños, brânză Pepper Jack, ceapă caramelizată, sos sriracha mayo</p>
           </div>
           <div class="ticket-price">34 lei</div>
@@ -187,32 +184,25 @@
     </div>
   </section>
 
-  <!-- LOCAȚII TIMIȘOARA -->
+  <!-- LOCAȚIE DUMBRĂVIȚA -->
   <section class="sec-dark" id="locatie">
     <div class="wrap">
       <div class="sec-head">
         <span class="eyebrow">Unde ne găsești</span>
-        <h2>LOCAȚII ÎN TIMIȘOARA</h2>
-        <p>Food Wagon-ul nostru se mută pentru a fi mereu aproape de tine.</p>
+        <h2>LOCAȚIA NOASTRĂ</h2>
+        <p>Te așteptăm la wagon pentru cele mai bune preparate street food din zonă.</p>
       </div>
 
-      <div class="loc-grid">
+      <div class="loc-grid" style="grid-template-columns: 1fr; max-width: 650px; margin: 0 auto;">
         <div class="loc-card">
           <div class="loc-body">
-            <div class="loc-name">Spot 1: Complex Studențesc</div>
-            <div class="loc-addr">Aleea Studenților (Lângă terenurile de sport)<br>Luni - Vineri: 11:00 - 23:00</div>
-            <div class="loc-actions">
-              <a href="https://maps.google.com" target="_blank" class="loc-btn primary">Deschide în Hărți</a>
+            <div class="loc-name">📍 Food Wagon Dumbrăvița</div>
+            <div class="loc-addr">
+              Strada Principală, Dumbrăvița, Timiș<br>
+              <strong>Program:</strong> Luni - Duminică: 11:00 - 23:00
             </div>
-          </div>
-        </div>
-
-        <div class="loc-card">
-          <div class="loc-body">
-            <div class="loc-name">Spot 2: Parcul Rozelor</div>
-            <div class="loc-addr">Intrarea dinspre Bulevardul Michelangelo<br>Sâmbătă - Duminică: 12:00 - 00:00</div>
             <div class="loc-actions">
-              <a href="https://maps.google.com" target="_blank" class="loc-btn primary">Deschide în Hărți</a>
+              <a href="https://maps.google.com/?q=Dumbravita+Timis" target="_blank" class="loc-btn primary">Deschide pe Hărți / GPS</a>
             </div>
           </div>
         </div>
@@ -224,22 +214,22 @@
   <div class="order-modal" id="orderModal">
     <div class="order-modal-inner">
       <button class="order-modal-close" onclick="closeOrderModal()">✕</button>
-      <h3>Comandă Mâncare</h3>
-      <p class="sub">Alege opțiunea preferată:</p>
+      <h3 style="color: var(--neon-orange);">Comandă Mâncare</h3>
+      <p class="sub" style="color: var(--text-muted);">Alege opțiunea preferată:</p>
 
       <a href="tel:0700000000" class="order-option phone">
         <div class="icon-wrap">📞</div>
         <div>
           <div class="opt-title">Comandă Telefonică</div>
-          <div class="opt-sub">Ridicare directă de la Wagon</div>
+          <div class="opt-sub">Ridicare din Dumbrăvița</div>
         </div>
       </a>
 
       <a href="https://wolt.com" target="_blank" class="order-option wolt">
         <div class="icon-wrap">🛵</div>
         <div>
-          <div class="opt-title">Comandă prin Wolt</div>
-          <div class="opt-sub">Livrare rapidă la ușă</div>
+          <div class="opt-title">Comandă prin Aplicații</div>
+          <div class="opt-sub">Livrare direct la tine acasă</div>
         </div>
       </a>
     </div>
@@ -249,7 +239,7 @@
   <footer>
     <div class="wrap">
       <div class="foot-bottom">
-        <p>© 2026 Wagon Food Timișoara. Toate drepturile rezervate.</p>
+        <p>© 2026 Food Wagon Dumbrăvița. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
