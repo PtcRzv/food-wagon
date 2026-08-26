@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Inițializare: Arată doar prima categorie (Street Burgers)
+  // Arată doar prima categorie de la început
   const defaultCategory = "burgeri";
   tickets.forEach(ticket => {
     if (ticket.getAttribute("data-category") !== defaultCategory) {
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Meniu mobil (Burger Button)
+  // Meniu Mobil
   if (burgerBtn && navLinks) {
     burgerBtn.addEventListener("click", () => {
       navLinks.classList.toggle("open");
@@ -38,7 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Modal Comandă
 function openOrderModal() {
   document.getElementById("orderModal").classList.add("open");
 }
