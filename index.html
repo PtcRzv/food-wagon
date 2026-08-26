@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Wagon Timișoara | Street Food</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- NAV BAR -->
+  <header class="site">
+    <div class="nav">
+      <div class="logo-mark">
+        <img src="./faraon-bf.png" alt="Wagon Logo">
+        <span class="logo-text">WAGON<span class="dot">.</span>FOOD</span>
+      </div>
+      <nav class="links" id="navLinks">
+        <a href="#meniu">Meniu</a>
+        <a href="#despre">Despre</a>
+        <a href="#locatie">Unde ne găsești</a>
+      </nav>
+      <div class="nav-cta">
+        <button class="order-btn" onclick="openOrderModal()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          Comandă Rapid
+        </button>
+        <button class="burger" id="burgerBtn">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-content">
+        <div class="badge-row">
+          <span class="pill rating">★ 4.9 Street Food Timișoara</span>
+        </div>
+        <h1>GUSTUL AUTENTIC DE STREET FOOD <span class="gold-text">PE ROȚI ÎN TIMIȘOARA.</span></h1>
+        <p class="lead">Gătim burgeri artizanali, loaded fries și crispy chicken proaspăt, direct din Food Wagon. Ingrediente alese, sosuri de casă și rețete proprii.</p>
+        <div class="hero-ctas">
+          <a href="#meniu" class="btn-primary">Vezi Meniul Zilei</a>
+          <a href="#locatie" class="btn-outline">Unde suntem azi?</a>
+        </div>
+        <div class="hero-info-line">
+          <span>📍 Complex Studențesc / Parcul Rozelor</span>
+          <span class="dot">•</span>
+          <span>🕒 Luni - Duminică: 11:00 - 23:00</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS / ABOUNT STRIP -->
+  <section class="sec-dark stats-wrap" id="despre">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-cell">
+          <div class="num">100%</div>
+          <div class="lbl">Carne proaspătă de vită Black Angus</div>
+        </div>
+        <div class="about-cell">
+          <div class="num">+15K</div>
+          <div class="lbl">Burgeri și porții servite în Timișoara</div>
+        </div>
+        <div class="about-cell">
+          <div class="num">8</div>
+          <div class="lbl">Sosuri artizanale de casă</div>
+        </div>
+        <div class="about-cell">
+          <div class="num">15 Min</div>
+          <div class="lbl">Timp mediu de preparare pe loc</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENIU SECTION -->
+  <section id="meniu">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Preparat pe loc</span>
+        <h2>MENIUL WAGON</h2>
+        <p>Alege din selecția noastră de street food. Fiecare produs este pregătit proaspăt imediat după comandă.</p>
+      </div>
+
+      <!-- TABS CATEGORII -->
+      <div class="menu-tabs">
+        <button class="tab-btn active" data-category="burgeri">Street Burgers</button>
+        <button class="tab-btn" data-category="fries">Loaded Fries</button>
+        <button class="tab-btn" data-category="crispy">Crispy & Snacks</button>
+        <button class="tab-btn" data-category="bauturi">Răcoritoare</button>
+      </div>
+
+      <!-- GRID PRODUSE (STIL BILET) -->
+      <div class="menu-grid">
+        <!-- BURGERI -->
+        <div class="menu-ticket" data-category="burgeri">
+          <div class="ticket-info">
+            <h4>Wagon Smash Burger</h4>
+            <p>Dublă chiftea vită Angus, cheddar dublu, bacon crocant, castraveți murați, sos Wagon</p>
+          </div>
+          <div class="ticket-price">32 lei</div>
+        </div>
+
+        <div class="menu-ticket" data-category="burgeri">
+          <div class="ticket-info">
+            <h4>Timișoara Spicy Burger</h4>
+            <p>Vită Angus, jalapeños, brânză Pepper Jack, ceapă caramelizată, sos sriracha mayo</p>
+          </div>
+          <div class="ticket-price">34 lei</div>
+        </div>
+
+        <div class="menu-ticket" data-category="burgeri">
+          <div class="ticket-info">
+            <h4>Crispy Chicken Burger</h4>
+            <p>Pui marinat în buttermilk, crustă panko, salată coleslaw, sos dulce-acrișor</p>
+          </div>
+          <div class="ticket-price">29 lei</div>
+        </div>
+
+        <div class="menu-ticket" data-category="burgeri">
+          <div class="ticket-info">
+            <h4>Halloumi Veggie Burger</h4>
+            <p>Halloumi la grătar, ardei copt, rucola, sos de pesto cu nuci, chifla brioche</p>
+          </div>
+          <div class="ticket-price">31 lei</div>
+        </div>
+
+        <!-- LOADED FRIES -->
+        <div class="menu-ticket" data-category="fries">
+          <div class="ticket-info">
+            <h4>Cheesy Bacon Fries</h4>
+            <p>Cartofi proaspeți prăjiți, sos cald de cheddar, bucăți de bacon crocant, verdeață</p>
+          </div>
+          <div class="ticket-price">22 lei</div>
+        </div>
+
+        <div class="menu-ticket" data-category="fries">
+          <div class="ticket-info">
+            <h4>Pulled Pork Fries</h4>
+            <p>Cartofi prăjiți, carne de porc afumată gătită 12 ore, sos BBQ, ceapă verde</p>
+          </div>
+          <div class="ticket-price">28 lei</div>
+        </div>
+
+        <!-- CRISPY -->
+        <div class="menu-ticket" data-category="crispy">
+          <div class="ticket-info">
+            <h4>Crispy Strips (5 buc)</h4>
+            <p>Fâșii din piept de pui în crustă crocantă + 1 sos la alegere</p>
+          </div>
+          <div class="ticket-price">24 lei</div>
+        </div>
+
+        <div class="menu-ticket" data-category="crispy">
+          <div class="ticket-info">
+            <h4>Mozzarella Sticks (6 buc)</h4>
+            <p>Bășicuțe de mozzarella topită în crustă aurie, servite cu sos marinara</p>
+          </div>
+          <div class="ticket-price">18 lei</div>
+        </div>
+
+        <!-- BĂUTURI -->
+        <div class="menu-ticket" data-category="bauturi">
+          <div class="ticket-info">
+            <h4>Limonadă de casă (500ml)</h4>
+            <p>Lămâie presată pe loc, miere, mentă proaspătă și gheață</p>
+          </div>
+          <div class="ticket-price">12 lei</div>
+        </div>
+
+        <div class="menu-ticket" data-category="bauturi">
+          <div class="ticket-info">
+            <h4>Fritz-Kola / Coca-Cola</h4>
+            <p>Doză 330ml rece</p>
+          </div>
+          <div class="ticket-price">8 lei</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCAȚII TIMIȘOARA -->
+  <section class="sec-dark" id="locatie">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Unde ne găsești</span>
+        <h2>LOCAȚII ÎN TIMIȘOARA</h2>
+        <p>Food Wagon-ul nostru se mută pentru a fi mereu aproape de tine.</p>
+      </div>
+
+      <div class="loc-grid">
+        <div class="loc-card">
+          <div class="loc-body">
+            <div class="loc-name">Spot 1: Complex Studențesc</div>
+            <div class="loc-addr">Aleea Studenților (Lângă terenurile de sport)<br>Luni - Vineri: 11:00 - 23:00</div>
+            <div class="loc-actions">
+              <a href="https://maps.google.com" target="_blank" class="loc-btn primary">Deschide în Hărți</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="loc-card">
+          <div class="loc-body">
+            <div class="loc-name">Spot 2: Parcul Rozelor</div>
+            <div class="loc-addr">Intrarea dinspre Bulevardul Michelangelo<br>Sâmbătă - Duminică: 12:00 - 00:00</div>
+            <div class="loc-actions">
+              <a href="https://maps.google.com" target="_blank" class="loc-btn primary">Deschide în Hărți</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL COMANDĂ -->
+  <div class="order-modal" id="orderModal">
+    <div class="order-modal-inner">
+      <button class="order-modal-close" onclick="closeOrderModal()">✕</button>
+      <h3>Comandă Mâncare</h3>
+      <p class="sub">Alege opțiunea preferată:</p>
+
+      <a href="tel:0700000000" class="order-option phone">
+        <div class="icon-wrap">📞</div>
+        <div>
+          <div class="opt-title">Comandă Telefonică</div>
+          <div class="opt-sub">Ridicare directă de la Wagon</div>
+        </div>
+      </a>
+
+      <a href="https://wolt.com" target="_blank" class="order-option wolt">
+        <div class="icon-wrap">🛵</div>
+        <div>
+          <div class="opt-title">Comandă prin Wolt</div>
+          <div class="opt-sub">Livrare rapidă la ușă</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <div class="foot-bottom">
+        <p>© 2026 Wagon Food Timișoara. Toate drepturile rezervate.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
