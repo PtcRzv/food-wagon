@@ -90,10 +90,9 @@ header.site {
 
 .logo-mark img {
   height: 48px;
-  width: 48px;
+  width: auto;
   object-fit: contain;
-  border-radius: 50%;
-  box-shadow: 0 0 10px var(--orange-glow);
+  filter: drop-shadow(0 0 6px var(--orange-glow));
 }
 
 .logo-mark .logo-text {
@@ -196,12 +195,12 @@ nav.links a:hover {
 }
 
 .hero-logo-large {
-  width: 120px;
-  height: 120px;
+  height: 140px;
+  width: auto;
+  max-width: 260px;
   margin-bottom: 20px;
-  border-radius: 50%;
-  box-shadow: 0 0 25px var(--orange-glow);
-  border: 2px solid var(--neon-orange);
+  object-fit: contain;
+  filter: drop-shadow(0 0 15px var(--orange-glow));
 }
 
 .badge-row {
