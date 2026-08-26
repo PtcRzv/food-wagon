@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Space+Grotesk:wght@400;500;600&family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@700&family=Space+Grotesk:wght@400;500;600&family=Space+Mono&display=swap');
 
 :root {
   --charcoal: #171310;
@@ -36,7 +36,7 @@ body {
 }
 
 h1, h2, h3, .display {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   letter-spacing: 0.02em;
   line-height: 0.95;
   margin: 0;
@@ -108,8 +108,8 @@ header.site {
 }
 
 .logo-mark .logo-text {
-  font-family: 'Oswald', sans-serif;
-  font-size: 24px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
   letter-spacing: 0.03em;
 }
 
@@ -227,9 +227,10 @@ nav.links a:hover, nav.links a:focus-visible {
 }
 
 .hero h1 {
-  font-size: clamp(42px, 5.5vw, 72px);
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(44px, 6vw, 76px);
   font-weight: 700;
-  line-height: 0.95;
+  line-height: 0.93;
   letter-spacing: 0.01em;
   text-transform: uppercase;
   margin: 0 0 20px 0;
@@ -304,7 +305,6 @@ nav.links a:hover, nav.links a:focus-visible {
   font-family: 'Space Mono', monospace;
   font-size: 12px;
   color: rgba(250, 243, 227, 0.55);
-  flex-wrap: wrap;
 }
 
 .hero-info-line .dot {
@@ -346,10 +346,9 @@ section {
   color: var(--cream-dim);
 }
 
-/* ---------- STATS GRID ---------- */
+/* ---------- STATS STRIP ---------- */
 .stats-wrap {
   margin-top: 0;
-  padding: 50px 0;
 }
 
 .about-grid {
@@ -395,7 +394,7 @@ section {
   .about-cell:nth-child(3), .about-cell:nth-child(4) { border-bottom: none; }
 }
 
-/* ---------- MENU TABS & TICKETS ---------- */
+/* ---------- MENIU BILET / STIL BERA FOOD ---------- */
 .menu-tabs {
   display: flex;
   gap: 12px;
@@ -442,9 +441,10 @@ section {
   background-color: #171310;
   background-image: 
     linear-gradient(rgba(23, 19, 16, 0.20), rgba(23, 19, 16, 0.20)), 
-    url('./faraon-bf.png');
+    url('faraon-bf.png');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   color: #faf3e3;
   position: relative;
   display: flex;
@@ -465,7 +465,6 @@ section {
   display: none !important;
 }
 
-/* Bulinele laterale ale biletului */
 .menu-ticket::before,
 .menu-ticket::after {
   content: "";
@@ -516,9 +515,7 @@ section {
 }
 
 @media (max-width: 680px) {
-  .loc-grid {
-    grid-template-columns: 1fr;
-  }
+  .loc-grid { grid-template-columns: 1fr; }
 }
 
 .loc-card {
@@ -539,8 +536,8 @@ section {
 }
 
 .loc-name {
-  font-family: 'Oswald', sans-serif;
-  font-size: 24px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
   margin-bottom: 8px;
 }
 
@@ -570,7 +567,7 @@ section {
   color: var(--ink);
 }
 
-/* ---------- ORDER MODAL ---------- */
+/* ---------- MODAL ---------- */
 .order-modal {
   position: fixed;
   inset: 0;
@@ -582,9 +579,7 @@ section {
   padding: 24px;
 }
 
-.order-modal.open {
-  display: flex;
-}
+.order-modal.open { display: flex; }
 
 .order-modal-inner {
   max-width: 380px;
@@ -594,7 +589,6 @@ section {
   border-radius: 20px;
   padding: 30px 28px;
   position: relative;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
 }
 
 .order-modal-close {
@@ -609,8 +603,8 @@ section {
 }
 
 .order-modal h3 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 30px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32px;
   margin-bottom: 6px;
 }
 
@@ -631,14 +625,10 @@ section {
   background: #fff;
   margin-bottom: 12px;
   cursor: pointer;
-  transition: border-color .2s, transform .2s;
-  text-align: left;
 }
 
-.order-option:hover {
-  border-color: var(--gold-deep);
-  transform: translateY(-2px);
-}
+.order-option.phone .icon-wrap { background: var(--charcoal); color: var(--gold); }
+.order-option.wolt .icon-wrap { background: #00c2e8; color: #fff; }
 
 .order-option .icon-wrap {
   width: 42px;
@@ -647,30 +637,11 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
   font-size: 18px;
 }
 
-.order-option.phone .icon-wrap {
-  background: var(--charcoal);
-  color: var(--gold);
-}
-
-.order-option.wolt .icon-wrap {
-  background: #00c2e8;
-  color: #fff;
-}
-
-.order-option .opt-title {
-  font-weight: 700;
-  font-size: 15px;
-}
-
-.order-option .opt-sub {
-  font-size: 12.5px;
-  color: var(--ink-soft);
-  margin-top: 2px;
-}
+.order-option .opt-title { font-weight: 700; font-size: 15px; }
+.order-option .opt-sub { font-size: 12.5px; color: var(--ink-soft); }
 
 /* ---------- FOOTER ---------- */
 footer {
